@@ -139,7 +139,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="bank-projekt-io.cpp" />
+    <ClCompile Include="..\..\..\Desktop\diagramy uml\kontoFinansowe.cpp" />
+    <ClCompile Include="..\..\..\Desktop\diagramy uml\kontoWalutowe.cpp" />
+    <ClCompile Include="..\..\..\Desktop\diagramy uml\Transakcja.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Desktop\diagramy uml\kontoFinansowe.h" />
+    <ClInclude Include="..\..\..\Desktop\diagramy uml\kontoWalutowe.h" />
+    <ClInclude Include="..\..\..\Desktop\diagramy uml\systemBankowy.h" />
+    <ClInclude Include="..\..\..\Desktop\diagramy uml\Transakcja.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
