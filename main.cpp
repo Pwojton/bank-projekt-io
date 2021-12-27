@@ -6,6 +6,7 @@ int main()
 {
 	int wybor; //zmienna sluzaca do poruszania sie po menu
 	int wyborLogowanie; //zmienna sluzaca do poruszania sie po menu po zalogowaniu
+	string login, haslo;
 
 	//menu
 	for (;;)
@@ -21,11 +22,14 @@ int main()
 		if (wybor == 1) //logowanie
 		{
 			system("CLS");
+			cout << "Podaj login: " << endl;
+			cin >> login;
+			cout << "Podaj haslo: " << endl;
+			cin >> haslo;
+
 			//menu po zalogowaniu
 			for (;;)
 			{
-
-
 				cout << "_____BANK____" << endl;
 				cout << "1. Sprawdz saldo" << endl;
 				cout << "2. Wykonaj przelew" << endl;
