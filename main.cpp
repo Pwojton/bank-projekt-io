@@ -5,11 +5,12 @@ using namespace std;
 int main()
 {
 	int wybor; //zmienna sluzaca do poruszania sie po menu
+	int wyborLogowanie; //zmienna sluzaca do poruszania sie po menu po zalogowaniu
 
 	//menu
 	for (;;)
 	{
-		cout << "____BANK____" << endl;
+		cout << "_____BANK____" << endl;
 		cout << "1. Zaloguj sie" << endl;
 		cout << "2. Utworz konto" << endl;
 		cout << "3. Wyjdz" << endl << endl;
@@ -20,6 +21,33 @@ int main()
 		if (wybor == 1) //logowanie
 		{
 			system("CLS");
+			//menu po zalogowaniu
+			for (;;)
+			{
+
+
+				cout << "_____BANK____" << endl;
+				cout << "1. Sprawdz saldo" << endl;
+				cout << "2. Wykonaj przelew" << endl;
+				cout << "3. Wyloguj sie" << endl << endl;
+				cout << "Wybierz operacje: ";
+				cin >> wyborLogowanie;
+				cout << endl;
+
+				if (wyborLogowanie == 1) {
+					;
+				}
+				else if (wyborLogowanie == 2)
+				{
+					;
+				}
+				else if (wyborLogowanie == 3)
+				{
+					system("CLS");
+					break;
+				}
+
+			}
 		}
 		else if (wybor == 2)//tworzenie konta
 		{
