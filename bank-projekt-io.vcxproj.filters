@@ -27,6 +27,9 @@
     <ClCompile Include="..\..\..\Desktop\diagramy uml\kontoFinansowe.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Klient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\Desktop\diagramy uml\kontoFinansowe.h">
@@ -39,6 +42,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Desktop\diagramy uml\Transakcja.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Klient.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

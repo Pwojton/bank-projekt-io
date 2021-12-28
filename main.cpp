@@ -1,4 +1,5 @@
 #include <iostream>
+#include "Klient.h"
 using namespace std;
 
 
@@ -6,7 +7,7 @@ int main()
 {
 	int wybor; //zmienna sluzaca do poruszania sie po menu
 	int wyborLogowanie; //zmienna sluzaca do poruszania sie po menu po zalogowaniu
-	string login, haslo;
+	string login, haslo, imie, nazwisko, dataUrodzenia, pesel;
 
 	//menu
 	for (;;)
@@ -55,6 +56,32 @@ int main()
 		}
 		else if (wybor == 2)//tworzenie konta
 		{
+			system("CLS");
+			cout << "Login: ";
+			cin >> login;
+			cout << endl;
+
+			cout << "Haslo: ";
+			cin >> haslo;
+			cout << endl;
+
+			cout << "Imie: ";
+			cin >> imie; 
+			cout << endl;
+
+			cout << "Nazwisko: ";
+			cin >> nazwisko;
+			cout << endl;
+
+			cout << "Pesel: ";
+			cin >> pesel;
+			cout << endl;
+
+			cout << "Data urodzenia: " << endl;
+			cin >> dataUrodzenia;
+			cout << endl;
+
+			Klient(login, haslo, imie, nazwisko, dataUrodzenia, pesel);
 			system("CLS");
 		}
 		else if (wybor == 3)//wychodzenie
