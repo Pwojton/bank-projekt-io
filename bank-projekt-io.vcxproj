@@ -139,18 +139,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\Desktop\diagramy uml\kontoFinansowe.cpp" />
-    <ClCompile Include="..\..\..\Desktop\diagramy uml\kontoWalutowe.cpp" />
-    <ClCompile Include="..\..\..\Desktop\diagramy uml\Transakcja.cpp" />
     <ClCompile Include="Klient.cpp" />
+    <ClCompile Include="kontoFinansowe.cpp" />
+    <ClCompile Include="kontoWalutowe.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="transakcja.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\Desktop\diagramy uml\kontoFinansowe.h" />
-    <ClInclude Include="..\..\..\Desktop\diagramy uml\kontoWalutowe.h" />
-    <ClInclude Include="..\..\..\Desktop\diagramy uml\systemBankowy.h" />
-    <ClInclude Include="..\..\..\Desktop\diagramy uml\Transakcja.h" />
     <ClInclude Include="Klient.h" />
+    <ClInclude Include="kontoFinansowe.h" />
+    <ClInclude Include="kontoWalutowe.h" />
+    <ClInclude Include="transakcja.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

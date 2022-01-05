@@ -18,33 +18,30 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Desktop\diagramy uml\kontoWalutowe.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Desktop\diagramy uml\Transakcja.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Desktop\diagramy uml\kontoFinansowe.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Klient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="kontoFinansowe.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="kontoWalutowe.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="transakcja.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\Desktop\diagramy uml\kontoFinansowe.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\Desktop\diagramy uml\kontoWalutowe.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\Desktop\diagramy uml\systemBankowy.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\Desktop\diagramy uml\Transakcja.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Klient.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="kontoFinansowe.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="kontoWalutowe.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="transakcja.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

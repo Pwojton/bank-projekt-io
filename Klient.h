@@ -12,6 +12,5 @@ private:
 public:
 	Klient(string login, string haslo, string imie, string nazwisko, string dataUrodzenia, string pesel);
 	void usuniecieKonta();
-
 };
 

@@ -1,7 +1,23 @@
 #include <iostream>
 #include "Klient.h"
+#include <string>
+#include <fstream>
+
 using namespace std;
 
+bool logowanie(string login, string haslo) //funkcja przyjmuje login i haslo podane przez klienta
+{
+	string pass, log; //dane klienta pobrane z pliku
+
+	ifstream read(login + ".txt");
+	getline(read, log);
+	getline(read, pass);
+
+	if (log == login && pass == haslo) //weryfikacja czy login i haslo podane przez uzytkownika sa poprawne
+		return true;
+	else
+		return false;
+}
 
 int main()
 {
@@ -23,36 +39,47 @@ int main()
 		if (wybor == 1) //logowanie
 		{
 			system("CLS");
-			cout << "Podaj login: " << endl;
+			cout << "Podaj login: ";
 			cin >> login;
-			cout << "Podaj haslo: " << endl;
+			cout << endl;
+			cout << "Podaj haslo: ";
 			cin >> haslo;
+			cout << endl;
+			system("CLS");
 
-			//menu po zalogowaniu
-			for (;;)
+			if (logowanie(login, haslo))
 			{
-				cout << "_____BANK____" << endl;
-				cout << "1. Sprawdz saldo" << endl;
-				cout << "2. Wykonaj przelew" << endl;
-				cout << "3. Wyloguj sie" << endl << endl;
-				cout << "Wybierz operacje: ";
-				cin >> wyborLogowanie;
-				cout << endl;
-
-				if (wyborLogowanie == 1) {
-					;
-				}
-				else if (wyborLogowanie == 2)
-				{
-					;
-				}
-				else if (wyborLogowanie == 3)
+				for (;;)
 				{
 					system("CLS");
-					break;
-				}
+					//menu po zalogowaniu
+					cout << "_____BANK____" << endl;
+					cout << "1. Sprawdz saldo" << endl;
+					cout << "2. Wykonaj przelew" << endl;
+					cout << "3. Wyloguj sie" << endl << endl;
+					cout << "Wybierz operacje: ";
+					cin >> wyborLogowanie;
+					cout << endl;
 
+					if (wyborLogowanie == 1) {
+						;
+					}
+					else if (wyborLogowanie == 2)
+					{
+						;
+					}
+					else if (wyborLogowanie == 3)
+					{
+						system("CLS");
+						break;
+					}
+				}
 			}
+			else
+			{
+				cout << "Podane dane nie sa poprawne" << endl;
+			}
+			
 		}
 		else if (wybor == 2)//tworzenie konta
 		{
