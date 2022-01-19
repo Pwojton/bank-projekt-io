@@ -29,7 +29,6 @@ void Klient::zalozenieKonta(kontoFinansowe* numer_konta) {
 	system("cls");
 	cout << "Wpisz ilosc pieniedzy wlozonej do konta przy zalozeniu: " << endl;
 	cin >> saldo;
-
 	numer_konta = new kontoFinansowe(nrKonta, saldo);
 	ofstream konto;
 	std::string nrkonta = std::to_string(nrKonta);
@@ -38,7 +37,7 @@ void Klient::zalozenieKonta(kontoFinansowe* numer_konta) {
 	konto.close();
 }
 
-void Klient::usuniecieKonta(kontoFinansowe* numer_konta) {
+void Klient::usuniecieKonta() {
 	delete numer_konta;
 }
 
