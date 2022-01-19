@@ -1,4 +1,5 @@
 #include <iostream>
+#include "kontoFinansowe.h"
 
 using namespace std;
 
@@ -11,6 +12,7 @@ private:
 
 public:
 	Klient(string login, string haslo, string imie, string nazwisko, string dataUrodzenia, string pesel);
-	void usuniecieKonta();
+	void zalozenieKonta(kontoFinansowe* numer_konta);
+	void usuniecieKonta(kontoFinansowe* numer_konta);
 };
 

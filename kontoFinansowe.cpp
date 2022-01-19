@@ -1,13 +1,27 @@
 #include "kontoFinansowe.h"
+#include <iostream>
 
-void kontoFinansowe::sprawdzSaldo() {
-	// TODO - implement kontoFinansowe::sprawdzSaldo
-	throw "Not yet implemented";
+kontoFinansowe::kontoFinansowe(long int nrKonta, float saldo) {
+	this->nrKonta = nrKonta;
+	this->saldo = saldo;
 }
 
-void kontoFinansowe::wykonajPrzelew() {
-	// TODO - implement kontoFinansowe::wykonajPrzelew
-	throw "Not yet implemented";
+float kontoFinansowe::sprawdzSaldo() {
+	return saldo;
+}
+
+long int kontoFinansowe::sprawdzNrKonta() {
+	return nrKonta;
+}
+
+void kontoFinansowe::wykonajPrzelew(kontoFinansowe numerKonta, float ilosc_mamony) {
+	if (sprawdzSaldo() - ilosc_mamony < 0)
+		std::cout << "Nie posiadasz tyle pieniedzy na koncie!" << std::endl;
+	else {
+		numerKonta.dodajMamone(ilosc_mamony);
+		saldo -= ilosc_mamony;
+		std::cout << "Wykonano przelew na numer Konta Bankowego " << numerKonta.sprawdzNrKonta() << "w iloœci pieniedzy " << ilosc_mamony << std::endl;
+	}
 }
 
 void kontoFinansowe::przegladajHistorieTransakcji() {
@@ -16,6 +30,9 @@ void kontoFinansowe::przegladajHistorieTransakcji() {
 }
 
 void kontoFinansowe::wyswietlSaldo() {
-	// TODO - implement kontoFinansowe::wyswietlSaldo
-	throw "Not yet implemented";
+	std::cout << "Twoje saldo wynosi " << saldo << "PLN" << std::endl;
+}
+
+void kontoFinansowe::dodajMamone(float ilosc_mamony) {
+	saldo += ilosc_mamony;
 }

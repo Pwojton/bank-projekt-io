@@ -8,13 +8,13 @@ private:
 	float saldo;
 
 public:
-	void sprawdzSaldo();
-
-	void wykonajPrzelew();
-
+	kontoFinansowe(long int nrKonta, float saldo);
+	long int sprawdzNrKonta();
+	float sprawdzSaldo();
+	void wykonajPrzelew(kontoFinansowe numerKonta, float iloscMamony);
 	void przegladajHistorieTransakcji();
-
 	void wyswietlSaldo();
+	void dodajMamone(float iloscMamony);
 };
 
 #endif
