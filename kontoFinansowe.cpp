@@ -16,11 +16,15 @@ long int kontoFinansowe::sprawdzNrKonta() {
 
 void kontoFinansowe::wykonajPrzelew(kontoFinansowe numerKonta, float ilosc_mamony) {
 	if (sprawdzSaldo() - ilosc_mamony < 0)
+	{
 		std::cout << "Nie posiadasz tyle pieniedzy na koncie!" << std::endl;
+		system("pause");
+	}
 	else {
 		numerKonta.dodajMamone(ilosc_mamony);
 		saldo -= ilosc_mamony;
-		std::cout << "Wykonano przelew na numer Konta Bankowego " << numerKonta.sprawdzNrKonta() << "w iloœci pieniedzy " << ilosc_mamony << std::endl;
+		std::cout << "Wykonano przelew na numer Konta Bankowego " << numerKonta.sprawdzNrKonta() << " w ilosci pieniedzy " << ilosc_mamony << std::endl;
+		system("pause");
 	}
 }
 
