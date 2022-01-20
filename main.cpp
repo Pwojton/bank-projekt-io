@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Klient.h"
 #include "kontoFinansowe.h"
+#include "kontoWalutowe.h"
 #include <string>
 #include <fstream>
 
@@ -59,7 +60,8 @@ int main()
 					cout << "1. Sprawdz saldo" << endl;
 					cout << "2. Wykonaj przelew" << endl;
 					cout << "3. Sprawdz historie transakcji" << endl;
-					cout << "4. Wyloguj sie" << endl << endl;
+					cout << "4. Przewalutowanie" << endl;
+					cout << "5. Wyloguj sie" << endl << endl;
 					cout << "Wybierz operacje: ";
 					cin >> wyborLogowanie;
 					cout << endl;
@@ -89,10 +91,16 @@ int main()
 					{
 						system("CLS");
 					}
-					else if (wyborLogowanie == 4)
+					else if (wyborLogowanie == 5)
 					{
 						system("CLS");
 						break;
+					}
+					else if (wyborLogowanie == 4)
+					{
+						int saldoWalutowe = kontoFinKlienta.sprawdzSaldo();
+						kontoWalutowe obiektKontaWalutowego(1000,1000);
+						obiektKontaWalutowego.przewalutowanie(saldoWalutowe);
 					}
 				}
 			}
