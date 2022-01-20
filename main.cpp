@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Klient.h"
+#include "kontoFinansowe.h"
 #include <string>
 #include <fstream>
 
@@ -24,7 +25,7 @@ int main()
 	int wybor; //zmienna sluzaca do poruszania sie po menu
 	int wyborLogowanie; //zmienna sluzaca do poruszania sie po menu po zalogowaniu
 	string login, haslo, imie, nazwisko, dataUrodzenia, pesel;
-
+	kontoFinansowe kontoFinKlienta(123456789, 1000);
 	//menu
 	for (;;)
 	{
@@ -47,6 +48,7 @@ int main()
 			cout << endl;
 			system("CLS");
 
+
 			if (logowanie(login, haslo))
 			{
 				for (;;)
@@ -56,19 +58,38 @@ int main()
 					cout << "_____BANK____" << endl;
 					cout << "1. Sprawdz saldo" << endl;
 					cout << "2. Wykonaj przelew" << endl;
-					cout << "3. Wyloguj sie" << endl << endl;
+					cout << "3. Sprawdz historie transakcji" << endl;
+					cout << "4. Wyloguj sie" << endl << endl;
 					cout << "Wybierz operacje: ";
 					cin >> wyborLogowanie;
 					cout << endl;
 
 					if (wyborLogowanie == 1) {
-						;
+						kontoFinKlienta.wyswietlSaldo();
+						system("pause");
 					}
 					else if (wyborLogowanie == 2)
 					{
-						;
+					
+						float kwota;
+						long int numerOdbiorcy;
+						system("CLS");
+						cout << "Podaj kwote: ";
+						cin >> kwota;
+						cout << endl;
+						cout << "Podaj numer konta na jaki chcesz przeslac pieniadze: ";
+						cin >> numerOdbiorcy;
+						cout << endl;
+						kontoFinansowe kontoFinOdbiorcy(numerOdbiorcy, 0);
+
+						kontoFinKlienta.wykonajPrzelew(kontoFinOdbiorcy, kwota);
+
 					}
 					else if (wyborLogowanie == 3)
+					{
+						system("CLS");
+					}
+					else if (wyborLogowanie == 4)
 					{
 						system("CLS");
 						break;
