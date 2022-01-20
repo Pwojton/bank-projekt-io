@@ -7,9 +7,9 @@ class kontoWalutowe : kontoFinansowe {
 private:
 	int waluta;
 	int kursWalut;
-
 public:
-	void przewalutowanie();
+	kontoWalutowe(int waluta, int kursWalut);
+	void przewalutowanie(int saldoWalutowe);
 };
 
 #endif
