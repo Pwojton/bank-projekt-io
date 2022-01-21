@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="Klient.cpp" />
     <ClCompile Include="kontoFinansowe.cpp" />
+    <ClCompile Include="kontoOszczednosciowe.cpp" />
     <ClCompile Include="kontoWalutowe.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="transakcja.cpp" />
@@ -148,6 +149,7 @@
   <ItemGroup>
     <ClInclude Include="Klient.h" />
     <ClInclude Include="kontoFinansowe.h" />
+    <ClInclude Include="kontoOszczednosciowe.h" />
     <ClInclude Include="kontoWalutowe.h" />
     <ClInclude Include="transakcja.h" />
   </ItemGroup>

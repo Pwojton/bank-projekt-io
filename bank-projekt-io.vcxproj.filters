@@ -30,6 +30,9 @@
     <ClCompile Include="transakcja.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="kontoOszczednosciowe.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Klient.h">
@@ -42,6 +45,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="transakcja.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="kontoOszczednosciowe.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
